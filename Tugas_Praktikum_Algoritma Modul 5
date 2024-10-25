@@ -1,0 +1,106 @@
+#Nama:Bagas akbar magriban
+#Nim:065002400004
+
+
+#Latihan 1
+data = "0"
+nilai = 0
+hasil = 0
+
+while True:
+    data = input("Input nilai: ")
+
+    if data == "":
+        break
+
+    elif data in ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D', 'E']:
+        if data == 'A':
+            hasil += 4.00
+            print('Nilai = 4.00')
+        elif data == 'A-':
+            hasil += 3.75
+            print('Nilai = 3.75')
+        elif data == 'B+':
+            hasil += 3.50
+            print('Nilai = 3.50')
+        elif data == 'B':
+            hasil += 3.00
+            print('Nilai = 3.00')
+        elif data == 'B-':
+            hasil += 2.75
+            print('Nilai = 2.75')
+        elif data == 'C+':
+            hasil += 2.50
+            print('Nilai = 2.50')
+        elif data == 'C':
+            hasil += 2.00
+            print('Nilai = 2.00')
+        elif data == 'C-':
+            hasil += 1.75
+            print('Nilai = 1.75')
+        elif data == 'D':
+            hasil += 1.50
+            print('Nilai = 1.50')
+        elif data == 'E':
+            hasil += 1.25
+            print('Nilai = 1.25')
+        
+        nilai += 1 
+    else:
+        print("nilai invalid!!")
+
+if nilai > 0:
+    avg = hasil / nilai
+    print(f'Rata-rata nilai: {avg:.2f}')
+else:
+    print("salah rek")
+
+#Latihan 2
+print("Selamat datang di Kebun Binatang! Yuk, hitung harga tiket masuknya 😊")
+
+
+total_harga = 0.0
+
+while True:
+    
+    umur = input("Masukkan umur pengunjung (atau tekan Enter kalau sudah selesai): ")
+    
+    
+    if umur == "":
+        break
+
+    
+    umur = int(umur)
+
+    
+    if umur <= 2:
+        harga = 0.0
+        print("Pengunjung ini gratis ya!")
+    elif 3 <= umur <= 12:
+        harga = 14.0
+        print("Untuk umur segitu, tiketnya $14.00")
+    elif umur >= 65:
+        harga = 18.0
+        print("Untuk senior, tiketnya jadi $18.00")
+    else:
+        harga = 23.0
+        print("Harga tiket normalnya $23.00")
+
+    
+    total_harga += harga
+    print(f"Total sementara: ${total_harga:.2f}")
+
+
+uang_bayar = float(input("Masukkan jumlah uang yang kamu bayar: "))
+
+
+kembalian = uang_bayar - total_harga
+
+
+if kembalian >= 0:
+    print(f"Terima kasih! Kembaliannya: ${kembalian:.2f}")
+else:
+    print(f"Maaf, uangnya kurang ${-kembalian:.2f}. Bisa ditambah sedikit lagi?")
+
+print("Semoga seru jalan-jalannya di kebun binatang! 🐒🐘🦁")
+
